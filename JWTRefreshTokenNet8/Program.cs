@@ -1,4 +1,6 @@
+using JWTRefreshTokenNet8.CustomFilters;
 using JWTRefreshTokenNet8.Models;
+using JWTRefreshTokenNet8.Repos;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+
+// to apply the Action Filder Globally at contriller or action level
+
+//builder.Services.AddControllers(options =>
+//{
+//    options.Filters.Add<TokenValidationFilter>();
+//});
+
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr")));
 
 
@@ -44,6 +55,14 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
     };
 });
+
+
+
+builder.Services.AddScoped<ITokenService, TokenService>();
+
+//Register the Filter in Dependency Injection
+
+ //builder.Services.AddScoped<TokenValidationFilter>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
