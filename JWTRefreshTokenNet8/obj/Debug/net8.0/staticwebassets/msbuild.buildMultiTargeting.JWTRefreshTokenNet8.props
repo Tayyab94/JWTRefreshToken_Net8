@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\JWTRefreshTokenNet8.props" />
+</Project>

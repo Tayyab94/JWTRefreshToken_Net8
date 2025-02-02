@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JWTRefreshTokenNet8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2117d8e9b8d051fa984da0dbb73a6f3d0075198e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7bfbdd01ed1d8862a67f502cd4bf5d504136a3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("JWTRefreshTokenNet8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JWTRefreshTokenNet8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

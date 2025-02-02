@@ -7,7 +7,6 @@ namespace JWTRefreshTokenNet8.Controllers
 
     // Apply Actionfilter to the specific action or controller
     [ServiceFilter(typeof(TokenValidationFilter))]
-
     [Authorize]
     [ApiController]
     [Route("[controller]")]

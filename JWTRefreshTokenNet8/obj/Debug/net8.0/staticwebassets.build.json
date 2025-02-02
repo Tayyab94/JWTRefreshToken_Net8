@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "cKjuf7bZgnXR3YvTCzBMwl59nZTP0qn5GCL5D+HRS4s=",
+  "Source": "JWTRefreshTokenNet8",
+  "BasePath": "_content/JWTRefreshTokenNet8",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -46,7 +46,7 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidateLifetime = true,
+        ValidateLifetime = false, // The JWT middleware no longer rejects expired tokens.
         ValidateIssuerSigningKey = true,
         ClockSkew = TimeSpan.Zero,
 
@@ -62,7 +62,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 //Register the Filter in Dependency Injection
 
- //builder.Services.AddScoped<TokenValidationFilter>();
+ builder.Services.AddScoped<TokenValidationFilter>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
